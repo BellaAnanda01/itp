@@ -103,10 +103,10 @@ const Hero = () => {
     `
 
     const RightImg = styled.img`
-        position: absolute;
+        position: relative;
         width: 25vw;
-        top: calc(100vh - 180px);
-        right: -90px;
+        top: -150px;
+        left: 80vw;
         transform: rotate(-36.44758613deg);
         @media only screen and (max-width: 600px) {
             /* For everything bigger than 768px */
