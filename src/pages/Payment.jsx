@@ -35,7 +35,7 @@ const Payment = () => {
         console.log(error.text);
     });
     fetch(
-      "https://script.google.com/macros/s/AKfycbyNbCGq3buLDNieDE7EmDSb0gt80JfKR8N7aDWJIn4tebEccYSmBFizxE3KTJN93HR5hQ/exec",
+      "https://script.google.com/macros/s/AKfycbxEXcCrD3WGJexwZP8fOam0NBOuKOVl7MqIO8R60qL-cfHSh2XLGGdkQYIdeeN0m1ji/exec",
       {
         method: "POST",
         body: formDatab
