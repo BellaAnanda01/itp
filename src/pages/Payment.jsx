@@ -128,7 +128,7 @@ const Payment = () => {
                   data-testid="loader"
                   style={{textAlign: "center"}}
                 />
-                <input name='BuktiBayar' type='text' style={{display: "none"}} className='imageurl'/>
+                <input name='BuktiBayar' type='text' style={{display: "none"}} className='imageurl' required/>
                 {FundraiseProducts.map((product, index) => {
                   if(item[product.code]){
                     return  <input name={`Merch${counter}`} type='text' style={{display: "none"}}
