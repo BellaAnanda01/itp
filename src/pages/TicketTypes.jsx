@@ -106,7 +106,8 @@ const TicketTypes = () => {
                     <SecondDivTickets>
                         <SecondDivTicketsBackground>
                             <SecondDivTicketsH style={{color: "#2f6eed"}}>Sharing S-1</SecondDivTicketsH>
-                            <SecondDivTicketsP>Sabtu, 23 September 2023</SecondDivTicketsP>
+                            <SecondDivTicketsP style={{marginBottom: 0}}>Sabtu, 23 September 2023</SecondDivTicketsP>
+                            <SecondDivTicketsP style={{marginTop: 0}}>(Via Zoom Meeting)</SecondDivTicketsP>
                             <SecondDivTicketsP style={{margin: "10px 0 15px"}}>Free</SecondDivTicketsP>
                             <Link to={`/buyticket`} style={{textDecoration: "none"}}><SecondDivTicketsP style={{backgroundColor: "#ff4747", color: "white", padding: "8px", borderRadius: "8px"}}>Get Your Tickets Now!</SecondDivTicketsP></Link>
                         </SecondDivTicketsBackground>
