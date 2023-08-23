@@ -23,7 +23,7 @@ const TicketSuccess = () => {
           flexDirection: "column",
           textAlign: 'center',
         }}>
-          <p style={{lineHeight: "24px"}}>Sharing S-1<br/><span style={{backgroundColor: "rgba(239, 162, 162, 0.40)", padding: "1.5px"}}><b>Sabtu, 11 November 2023</b></span></p>
+          <p style={{lineHeight: "24px"}}>Sharing S-1<br/><span style={{backgroundColor: "rgba(239, 162, 162, 0.40)", padding: "1.5px"}}><b>Sabtu, 23 November 2023</b></span></p>
           <p style={{
             fontFamily: "Chewy, cursive",
             fontSize: "21px",
