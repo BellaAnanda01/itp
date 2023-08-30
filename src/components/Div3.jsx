@@ -65,9 +65,13 @@ const Div3 = () => {
                 <ThirdDivH>Yuk, beli tiket ITP sekarang!</ThirdDivH>
                 <Link to={`/tickettypes`} style={{textDecoration: "none"}}><ThirdDivButton style={{backgroundColor: "#FF678B"}}>BUY TICKETS</ThirdDivButton></Link>
             </ThirdDivDiv>
-            <ThirdDivDiv>
+            {/* <ThirdDivDiv>
                 <ThirdDivH>Jangan lupa untuk check out merch kami, ya!</ThirdDivH>
                 <Link to={`/products`} style={{textDecoration: "none"}}><ThirdDivButton style={{backgroundColor: "#FF678B"}}>SHOP NOW</ThirdDivButton></Link>
+            </ThirdDivDiv> */}
+            <ThirdDivDiv>
+                <ThirdDivH>Jangan lupa untuk check out merch kami, ya!</ThirdDivH>
+                <Link to={`/`} style={{textDecoration: "none"}}><ThirdDivButton disabled style={{backgroundColor: "#fb97ae", cursor: "default"}}>COMING SOON</ThirdDivButton></Link>
             </ThirdDivDiv>
         </ThirdDiv>
     </div>
