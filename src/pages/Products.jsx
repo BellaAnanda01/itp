@@ -245,7 +245,7 @@ const Products = () => {
             lineHeight: "35px"
           }}>
             <div className="totalPrice"><span style={{display: "none"}}>Total Item:{totalItem}</span>Total Price: {formatRupiah(totalPrice)}</div>
-            <Link to={`/checkout`}><button style={{
+            <Link to={`/checkout2`}><button style={{
               padding: "2px 30px",
               fontFamily: 'Sniglet, cursive',
               fontSize: "17px",

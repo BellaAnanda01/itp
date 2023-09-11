@@ -5,7 +5,6 @@ import app from "../firebase";
 import PulseLoader from "react-spinners/PulseLoader";
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
-
 import {FundraiseProducts} from '../data.js'
 
 const Payment = () => {
@@ -23,6 +22,11 @@ const Payment = () => {
     return resMerch
   }
 
+  function formatRupiah(money) {
+    return new Intl.NumberFormat('id-ID',
+      { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 } // diletakkan dalam object
+    ).format(money);
+  }
 
   function Submit(e) {
     e.preventDefault()
@@ -83,8 +87,8 @@ const Payment = () => {
 
   return (
     <div>
-      <div className="bg-[url('assets/background5.png')] bg-bottom min-h-screen bg-no-repeat bg-cover bg-scroll">
-        <div className='p-[20px]'>
+      {/* <div className="bg-[url('assets/background5.png')] bg-bottom min-h-screen bg-no-repeat bg-cover bg-scroll">
+        <div className='p-[20px]'> */}
           <div className='flex flex-col justify-center items-center w-[80vw] max-w-[800px] bg-[#E9E3D7] p-[20px] mx-[auto] my-[30px] rounded-xl font-[Sniglet, cursive]'>
             <p className="font-chewy text-3xl text-center tracking-wide">Pembayaran</p>
             <div className='mx-[auto] font-sniglet my-2 bg-white w-[70vw] max-w-[700px] pl-2 tracking-wide rounded-md'>
@@ -108,7 +112,8 @@ const Payment = () => {
             </div>
           </div>
           <div className='flex flex-col justify-center items-center w-[80vw] max-w-[800px] bg-[#E9E3D7] p-[20px] mx-[auto] my-[30px] rounded-xl font-[Sniglet, cursive]'>
-            <p className="font-chewy text-3xl text-center tracking-wide">Upload Bukti Pembayaran</p>
+            <p className="font-chewy text-3xl text-center tracking-wide mb-2">Upload Bukti Pembayaran</p>
+            <p className='m-0'>Total yang perlu dibayar: {formatRupiah(localStorage.getItem("totalKeseluruhan"))}</p>
             <form ref={form} className="form" onSubmit={(e) => Submit(e)}>
               <div>
                 <input style={{
@@ -165,8 +170,8 @@ const Payment = () => {
             </form>
           </div>
         </div>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   )
 }
 

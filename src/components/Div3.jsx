@@ -10,7 +10,7 @@ const Div3 = () => {
         grid-template-columns: 50vw 50vw;
         justify-content: center;
         align-items: center;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 1000px) {
             display: flex;
             flex-direction: column;
             gap: 100px;
@@ -38,7 +38,7 @@ const Div3 = () => {
         width: max-content;
         max-width: 350px;
         padding: 30px;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 1000px) {
             font-size: 30px;
         }
     `
@@ -52,6 +52,10 @@ const Div3 = () => {
         color: white;
         letter-spacing: 0.055em;
         text-align: center;
+        @media only screen and (max-width: 1000px) {
+            font-size: 20px;
+            width: 35vw;
+        }
         @media only screen and (max-width: 600px) {
             font-size: 20px;
             width: 50vw;

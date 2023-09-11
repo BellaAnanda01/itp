@@ -96,7 +96,7 @@ const Hero = () => {
         top: calc(100vh - 150px);
         left: -90px;
         transform: rotate(36.44758613deg);
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 640px) {
             /* For everything bigger than 768px */
             display: none;
         }
@@ -105,10 +105,10 @@ const Hero = () => {
     const RightImg = styled.img`
         position: relative;
         width: 25vw;
-        top: -150px;
+        top: -210px;
         left: 80vw;
         transform: rotate(-36.44758613deg);
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 640px) {
             /* For everything bigger than 768px */
             display: none;
         }
