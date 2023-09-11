@@ -7,7 +7,8 @@ import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 import {FundraiseProducts} from '../data.js'
 
-const Payment = () => {
+const Payment = (values) => {
+  console.log(values)
   let [loadingChange, setLoadingChange] = useState(false);
   let [loadingSubmit, setLoadingSubmit] = useState(false);
   let counter = 0;

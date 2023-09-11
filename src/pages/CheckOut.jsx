@@ -4,12 +4,25 @@ import { Link } from 'react-router-dom';
 import PulseLoader from "react-spinners/PulseLoader";
 import Payment from './Payment';
 
+const values = {
+    "CatatanPesanan" : ""
+}
 const CheckOut = () => {
-    const [checkoutview, setCheckoutview] = useState(true)
-    const [paymentview, setPaymentview] = useState(false)
+    const [checkoutview, setCheckoutview] = useState(true);
+    const [paymentview, setPaymentview] = useState(false);
     let [loadingSubmit, setLoadingSubmit] = useState(false);
     
     function Submit(e) {
+        // e.preventDefault()
+        const formDatab = new FormData(e.target)
+        for (const pair of formDatab.entries()) {
+            // if(pair[0] == "CatatanPesanan"){
+                console.log(`${pair[0]}, ${pair[1]}`);
+                values[pair[0]] = pair[1]
+            // }
+          }
+        //   localStorage.setItem(`${pair[0]}`, pair[1])
+        //   console.log(values)
         setLoadingSubmit(true);
         setCheckoutview(!checkoutview);
         setPaymentview(!paymentview);
@@ -50,7 +63,7 @@ const CheckOut = () => {
                             </form>
                         </div>
                     )}
-                    {paymentview && <Payment />}
+                    {paymentview && <Payment values={values}/>}
                 </div>
             </div>
         </div>
