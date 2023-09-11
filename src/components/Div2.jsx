@@ -79,7 +79,7 @@ const Div2 = () => {
 
 
     return (
-        <div>
+        <div className='mt-0 sm:mt-[-250px]'>
             <SecondDiv>
                 <SecondDivH1>OUR EVENTS</SecondDivH1>
                 <SecondDivH1el src={element1}/>
