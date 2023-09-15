@@ -4,7 +4,7 @@ import NavbarMenu from './NavbarMenu';
 const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     return (
-        <nav className="bg-gray-400 border-b border-solid border-slate-600 font-sniglet w-[100vw] sticky top-0 z-10">
+        <nav className="bg-[#E9E3D7] border-b border-solid border-slate-600 font-sniglet w-[100vw] sticky top-0 z-10">
             <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-4">
                 <div className="flex-shrink-0 font-bold tracking-wider">
                 ITP 2023

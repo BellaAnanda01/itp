@@ -17,6 +17,8 @@ import Footer from './components/Footer';
 import MerchSuccess from './pages/MerchSuccess';
 import Payment from './pages/Payment';
 import CheckOut from './pages/CheckOut';
+import Products2 from './pages/Products2';
+import Product from './pages/Product';
 
 function App() {
   return (
@@ -29,10 +31,12 @@ function App() {
         <Route path="/ticketsuccess" element={<TicketSuccess />} />
         <Route path="/merchsuccess" element={<MerchSuccess />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products2" element={<Products2 />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/test" element={<Test />} />
         <Route path="/checkout" element={<CheckOut2 />} />
         <Route path="/checkout2" element={<CheckOut />} />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
       <Footer />
     </BrowserRouter>

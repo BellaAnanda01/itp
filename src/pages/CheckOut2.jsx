@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import PulseLoader from "react-spinners/PulseLoader";
 
-const CheckOut2 = () => {
+const CheckOut2 = (set) => {
     const [productQuantities, setProductQuantities] = useState({});
     const [provinsiData, setProvinsiData] = useState([]);
     const [kotaData, setKotaData] = useState([]);

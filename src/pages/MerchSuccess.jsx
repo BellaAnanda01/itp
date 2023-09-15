@@ -12,7 +12,7 @@ const MerchSuccess = () => {
           backgroundColor: "#E9E3D7",
           borderRadius: "20px",
           position: "absolute",
-          top: "45%",
+          top: "calc(45% + 64px)",
           left: "50%",
           transform: "translate(-50%, -50%)",
           fontFamily: 'Sniglet, cursive',
@@ -30,8 +30,8 @@ const MerchSuccess = () => {
             width: "60vw"
           }}>Terima Kasih Telah Melakukan Pembelian Merchandise ITP 2023!</p>
           <p>Contact Person: <br/>
-            Dinda (WA:  085967070964| ID LINE: dinda072) <br/>
-            Kayfa (WA: 081383576134| ID LINE: kayfa_puti)
+            Dinda (WA:  085967070964 | ID LINE: dinda072) <br/>
+            Kayfa (WA: 081383576134 | ID LINE: kayfa_puti)
           </p>
           <Link to={`/`}>
             <button style={{border: "none", fontFamily: 'Sniglet, cursive', letterSpacing: '0.03em', backgroundColor: '#df7273', color: "white", padding: "8px", borderRadius: "8px"}}>Back to Home</button>
@@ -39,7 +39,7 @@ const MerchSuccess = () => {
         </div>
         <div style={{
           position: 'absolute',
-          bottom: '20px',
+          bottom: "calc(40px - 64px)",
           left: '50%',
           transform: 'translate(-50%, 0%)'
         }}>

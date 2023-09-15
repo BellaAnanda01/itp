@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 import {FundraiseProducts} from '../data.js'
 
-const Payment = () => {
+const Payment = ({values}) => {
   let [loadingChange, setLoadingChange] = useState(false);
   let [loadingSubmit, setLoadingSubmit] = useState(false);
   let counter = 0;
@@ -15,6 +15,11 @@ const Payment = () => {
   const image = useRef("")
   const form = useRef();
   const navigate = useNavigate();
+
+  let formValues = values
+  let formValuesReturn = Object.entries(formValues).map(([key, value]) => {
+    return (<input style={{display: "none"}} key={key} name={key} type='text' defaultValue={value}/>)
+  })
 
   function merchMapping(index) {
     const resMerch = `${counter + 1}. ${FundraiseProducts[index]?.name} berjumlah ${item[FundraiseProducts[index]?.code]}`
@@ -134,17 +139,18 @@ const Payment = () => {
                   style={{textAlign: "center"}}
                 />
                 <input name='BuktiBayar' type='text' style={{display: "none"}} className='imageurl' required/>
+                {formValuesReturn}
                 {FundraiseProducts.map((product, index) => {
-                  if(item[product.code]){
-                    return  <input name={`Merch${counter}`} type='text' style={{display: "none"}}
-                    key={`${counter}`}
-                    defaultValue={merchMapping(index)}/>
-                  }
-                })
+                    if(item[product.code]){
+                      return  <input name={`Merch${counter}`} type='text' style={{display: "none"}}
+                      key={`${counter}`}
+                      defaultValue={merchMapping(index)}/>
+                    }
+                  })
                 }
-                <input name='Name' type='text' style={{display: "none"}} defaultValue={localStorage.getItem("Name")}/>
-                <input name='Email' type='text' style={{display: "none"}} defaultValue={localStorage.getItem("Email")}/>
-                <input name='TotalKeseluruhan' type='text' style={{display: "none"}} defaultValue={localStorage.getItem("totalKeseluruhan")}/>
+                {/* <input name='TotalKeseluruhan' type='text' style={{display: "none"}} defaultValue={formatRupiah(localStorage.getItem("totalKeseluruhan"))}/> 
+                  TODO: ININYA DOBEL DI EMAIL, ADA YANG NGGA PAKE RP ADA YANG GAPAKE
+                */}
               </div>
               <div style={{display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", marginBottom: "20px"}}>
                 <input style={{
