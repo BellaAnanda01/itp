@@ -23,12 +23,13 @@ const TicketSuccess = () => {
           flexDirection: "column",
           textAlign: 'center',
         }}>
-          <p style={{lineHeight: "24px"}}>Sharing S-1<br/><span style={{backgroundColor: "rgba(239, 162, 162, 0.40)", padding: "1.5px"}}><b>Sabtu, 23 November 2023</b></span></p>
+          <p style={{lineHeight: "24px"}}>Open House<br/><span style={{backgroundColor: "rgba(239, 162, 162, 0.40)", padding: "1.5px"}}><b>Sabtu, 11 November 2023</b></span></p>
           <p style={{
             fontFamily: "Chewy, cursive",
             fontSize: "21px",
             width: "60vw"
-          }} className='successNote'>Terima Kasih Telah Melakukan Pendaftaran Menonton Sharing S-1!</p>
+          }} className='successNote'>Terima Kasih Telah Melakukan Pembelian Tiket Open House!</p>
+          <p style={{lineHeight: "24px"}}>Silakan bergabung dengan grup WhatsApp berikut:<br/><Link to={localStorage.getItem('tipetiket') === "Offline" ? "Link grup offline" : "Link grup online"}><span style={{padding: "1.5px"}}><b>{localStorage.getItem('tipetiket') === "Offline" ? "Link grup offline" : "Link grup online"}</b></span></Link></p>
           <p>Contact Person: <br/>
             Kemal (WA:  081315276216 | ID LINE: kemal_81) <br/>
             Dini (WA: 08111031614 | ID LINE: dinisaurus.)

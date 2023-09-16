@@ -12,6 +12,9 @@ import TicketTypes from './pages/TicketTypes';
 import TicketSuccess from './pages/TicketSuccess';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import SelectClass from './pages/SelectClass';
+import TicketPayment from './pages/TicketPayment';
+import ETicket from './pages/ETicket';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         <Route path="/tickettypes" element={<TicketTypes />} />
         <Route path="/buyticket" element={<Ticket />} />
         <Route path="/ticketsuccess" element={<TicketSuccess />} />
+        <Route path="/selectclass" element={<SelectClass />} />
+        <Route path="/ticketpayment" element={<TicketPayment />} />
+        <Route path="/eticket/:id" element={<ETicket />} />
         <Route path="/test" element={<Test />} />
       </Routes>
       <Footer />
