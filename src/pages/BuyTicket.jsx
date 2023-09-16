@@ -21,7 +21,7 @@ const Ticket = () => {
         setLoadingSubmit(true)
         const formEle = document.querySelector("form");
         e.preventDefault()
-        emailjs.sendForm('service_xctzzvd', 'template_1hv5ncy', form.current, 'TZhEcRcr-wp0i3YYA')
+        emailjs.sendForm('', 'template_1hv5ncy', form.current, 'TZhEcRcr-wp0i3YYA')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
