@@ -10,20 +10,18 @@ import app from "../firebase";
 import emailjs from '@emailjs/browser';
 
 const TicketPayment = () => {
-  // eslint-disable-next-line
   let [loadingChange, setLoadingChange] = useState(false);
-  // eslint-disable-next-line
   let [loadingSubmit, setLoadingSubmit] = useState(false);
-  let [BarcodeNumber, setBarcodeNumber] = useState(0)
+  let [TheBarcodeNumber, setTheBarcodeNumber] = useState(0)
   const image = useRef("")
   const form = useRef();
   const navigate = useNavigate();
 
   useEffect(() => {
-    setBarcodeNumber(Math.floor(1000000000 + Math.random() * 9999999999));
+    setTheBarcodeNumber(Math.floor(1000000000 + Math.random() * 9999999999));
   }, [])
 
-  let UrlBarcodeNumber = `http://localhost:3000/eticket/${BarcodeNumber}`
+  let UrlBarcodeNumber = `http://localhost:3000/eticket/${TheBarcodeNumber}`
 
   let ticketsData = JSON.parse(localStorage.getItem("ticketsDataB"));
   let ticketDataReturn = Object.entries(ticketsData).map(([key, value]) => {
@@ -67,6 +65,24 @@ const TicketPayment = () => {
   function Submit(e) {
     e.preventDefault();
     setLoadingSubmit(true)
+    const postData = {
+      JenisTiket: `${ticketsData.JenisTiket}`,
+      NamaLengkap: `${ticketsData.NamaLengkap}`,
+      KelasPilihan: `${ticketsData.KelasPilihan}`,
+      BarcodeNumber: TheBarcodeNumber
+  }
+  
+  fetch(
+    "https://itp-ticketbackend.vercel.app/ticket/",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+        },
+      body: JSON.stringify(postData)
+    }
+    ).then(response => response.json())
+    
     const formEle = document.querySelector("form");
     e.preventDefault()
     emailjs.sendForm('service_xctzzvd', 'template_95gj8rw', form.current, 'TZhEcRcr-wp0i3YYA')
@@ -167,7 +183,7 @@ const TicketPayment = () => {
             }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" type='file' onChange={(e) => HandleChange(e)}/>
             <div className='flex flex-col'>
             <input placeholder='BuktiBayar' name='BuktiBayar' type='text' style={{display: "none"}} className='imageurl' required/>
-            <input name='BarcodeNumber' type='number' style={{display: "none"}} value={BarcodeNumber}/>
+            <input name='BarcodeNumber' type='number' style={{display: "none"}} value={TheBarcodeNumber}/>
             <input name='ETicket' type='text' style={{display: "none"}} value={UrlBarcodeNumber}/>
             <input name='GrupWA' type='text' style={{display: "none"}} value={localStorage.getItem('tipetiket') === "Offline" ? "Link grup offline" : "Link grup online"}/>
             {ticketDataReturn}
