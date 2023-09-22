@@ -30,7 +30,7 @@ const TicketPayment = () => {
   // eslint-disable-next-line
   }, []);
 
-  let UrlBarcodeNumber = `http://localhost:3000/eticket/${TheBarcodeNumber}`
+  let UrlBarcodeNumber = `https://itp-git-fix-ticket-bellaananda01.vercel.app/eticket/${TheBarcodeNumber}`
 
   let ticketsData = JSON.parse(localStorage.getItem("ticketsDataB"));
   let ticketDataReturn = ""
