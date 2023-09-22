@@ -43,7 +43,7 @@ const Ticket = () => {
       }
       const tipetiket = localStorage.getItem('tipetiket');
       if(tipetiket === 'Offline') {
-        navigate('/selectclass');
+        navigate('/classselection');
       }
       if(tipetiket === 'Online') {
         navigate('/ticketpayment');

@@ -26,7 +26,7 @@ function App() {
         <Route path="/tickettypes" element={<TicketTypes />} />
         <Route path="/buyticket" element={<Ticket />} />
         <Route path="/ticketsuccess" element={<TicketSuccess />} />
-        <Route path="/selectclass" element={<SelectClass />} />
+        <Route path="/classselection" element={<SelectClass />} />
         <Route path="/ticketpayment" element={<TicketPayment />} />
         <Route path="/eticket/:id" element={<ETicket />} />
         <Route path="/test" element={<Test />} />

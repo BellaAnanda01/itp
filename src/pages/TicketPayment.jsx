@@ -125,7 +125,7 @@ const TicketPayment = () => {
   const back = (e) => {
       e.preventDefault();
       if(localStorage.getItem('tipetiket') === "Offline") {
-        navigate('/selectclass');
+        navigate('/classselection');
       } else {
         navigate('/buyticket');
       }
