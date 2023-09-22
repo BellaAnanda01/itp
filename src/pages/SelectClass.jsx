@@ -102,7 +102,7 @@ const SelectClass = () => {
                             margin: '0',
                             fontFamily: 'Sniglet, cursive',
                             marginLeft: '5px',
-                        }}>Pilihan Kelas:<br/><span style={{lineHeight: '0',fontSize: "14px", margin: "0"}}>Pilihlah maksimal 3 kelas</span></p>
+                        }}>Pilihan Kelas:<br/><span style={{lineHeight: '0',fontSize: "14px", margin: "0"}}>Pilihlah maksimal 3 kelas yang paling kamu minati</span></p>
                         </div>
                         <div style={{
                             backgroundColor: '#fff3d7',
