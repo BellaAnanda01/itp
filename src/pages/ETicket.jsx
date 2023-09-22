@@ -79,7 +79,7 @@ const ETicket = () => {
                 <p>: {data[1] === "Open House - Offline" ? "Fakultas Psikologi UI" : "Zoom Meeting"}</p>
               </div>
               <div className="flex justify-center items-center my-[10px]">
-                <Barcode value={data[5]} height="40" displayValue="true" background="transparent"/>
+                <Barcode value={data[4]} height="40" displayValue="true" background="transparent"/>
               </div>
             </div>
           </div>
