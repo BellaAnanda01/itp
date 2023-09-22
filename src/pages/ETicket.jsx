@@ -73,8 +73,8 @@ const ETicket = () => {
                 <p>: {data[2]}</p>
                 <p>Date</p>
                 <p>: Saturday, 11 November 2023</p>
-                <p>Time</p>
-                <p>: 09.00 WIB</p>
+                <p>Open Gate</p>
+                <p>: {data[1] === "Open House - Offline" ? "08:00 WIB" : "08:40 WIB"}</p>
                 <p>Place</p>
                 <p>: {data[1] === "Open House - Offline" ? "Fakultas Psikologi UI" : "Zoom Meeting"}</p>
               </div>
