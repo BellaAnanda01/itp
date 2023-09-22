@@ -33,7 +33,7 @@ const TicketSuccess = () => {
             fontSize: "21px",
             width: "60vw"
           }} className='successNote'>Terima Kasih Telah Melakukan Pembelian Tiket Open House!</p>
-          <p style={{lineHeight: "24px"}}>Silakan bergabung dengan grup WhatsApp berikut:<br/><Link to={localStorage.getItem('tipetiket') === "Offline" ? "Link grup offline" : "Link grup online"}><span style={{padding: "1.5px"}}><b>{localStorage.getItem('tipetiket') === "Offline" ? "Link grup offline" : "Link grup online"}</b></span></Link></p>
+          <p style={{lineHeight: "24px"}}>Silakan bergabung dengan grup WhatsApp berikut:<br/><Link to={localStorage.getItem('tipetiket') === "Offline" ? "https://chat.whatsapp.com/C9qH4i2u1zpHjntRDZI5yS" : "https://chat.whatsapp.com/D6JenRUzBTV7m2oZIctCEa"}><span style={{padding: "1.5px"}}><b>{localStorage.getItem('tipetiket') === "Offline" ? "Link grup offline" : "Link grup online"}</b></span></Link></p>
           <p>Contact Person: <br/>
             Kemal (WA:  081315276216 | ID LINE: kemal_81) <br/>
             Dini (WA: 08111031614 | ID LINE: dinisaurus.)

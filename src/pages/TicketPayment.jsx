@@ -198,7 +198,7 @@ const TicketPayment = () => {
             <input placeholder='BuktiBayar' name='BuktiBayar' type='text' style={{display: "none"}} className='imageurl' required/>
             <input name='BarcodeNumber' type='number' style={{display: "none"}} value={TheBarcodeNumber}/>
             <input name='ETicket' type='text' style={{display: "none"}} value={UrlBarcodeNumber}/>
-            <input name='GrupWA' type='text' style={{display: "none"}} value={localStorage.getItem('tipetiket') === "Offline" ? "Link grup offline" : "Link grup online"}/>
+            <input name='GrupWA' type='text' style={{display: "none"}} value={localStorage.getItem('tipetiket') === "Offline" ? "https://chat.whatsapp.com/C9qH4i2u1zpHjntRDZI5yS" : "https://chat.whatsapp.com/D6JenRUzBTV7m2oZIctCEa"}/>
             {ticketDataReturn}
             </div>
           </div> 
