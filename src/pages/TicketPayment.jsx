@@ -145,19 +145,14 @@ const TicketPayment = () => {
           <div className='flex flex-col justify-center items-center w-[80vw] max-w-[800px] bg-[#E9E3D7] p-[20px] mx-[auto] my-[30px] rounded-xl font-[Sniglet, cursive]'>
             <p className="font-chewy text-3xl text-center tracking-wide mb-2">Cara Pembayaran</p>
             <div className='mx-[auto] font-sniglet my-2 bg-white w-[70vw] max-w-[700px] pl-2 tracking-wide rounded-md'>
-              <p className='mb-1 py-2'><b>Mandiri</b></p>
-              <p>Atas Nama: <b>Kayfa Puti Naya</b></p>
-              <p className='mb-1'>No. Rekening: <b>1330023979438</b></p>
+              <p className='mb-1 py-2'><b>BCA</b></p>
+              <p>Atas Nama: <b>Janice Putri Heryanto</b></p>
+              <p className='mb-1'>No. Rekening: <b>8400240397</b></p>
             </div>
             <div className='mx-[auto] font-sniglet my-2 bg-white w-[70vw] max-w-[700px] pl-2 tracking-wide rounded-md'>
               <p className='mb-1 py-2'><b>BNI</b></p>
-              <p>Atas Nama: <b>Renoadhi Taufiqulhakim</b></p>
-              <p className='mb-1'>No. Rekening: <b>1627235093</b></p>
-            </div>
-            <div className='mx-[auto] font-sniglet my-2 bg-white w-[70vw] max-w-[700px] pl-2 tracking-wide rounded-md'>
-              <p className='mb-1 py-2'><b>BCA</b></p>
-              <p>Atas Nama: <b>Renoadhi Taufiqulhakim</b></p>
-              <p className='mb-1'>No. Rekening: <b>6030554335</b></p>
+              <p>Atas Nama: <b>Janice Putri Heryanto</b></p>
+              <p className='mb-1'>No. Rekening: <b>1225997647</b></p>
             </div>
             <div className='mx-[auto] font-sniglet my-2 bg-white w-[70vw] max-w-[700px] pl-2 tracking-wide rounded-md'>
               <p className='mb-1 py-2'><b>QRIS</b></p>
