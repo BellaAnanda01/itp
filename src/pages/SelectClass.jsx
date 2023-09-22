@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import background from '../assets/background2.png'
@@ -13,6 +13,28 @@ const SelectClass = () => {
     const form = useRef();
     const navigate = useNavigate();
 
+    useEffect(() => {
+        let ticketData = JSON.parse(localStorage.getItem('ticketsDataB'))
+        if(ticketData === null) {
+            navigate('/tickettypes')
+        } else {
+            let getKelasPilihan = JSON.parse(localStorage.getItem('ticketsDataB')).KelasPilihan
+            if (getKelasPilihan === undefined) {
+                setPilihanKelas({
+                    kelas: [],
+                    response: [],
+                });
+            } else {
+                setPilihanKelas({
+                    kelas: getKelasPilihan,
+                    response: getKelasPilihan,
+                });
+            }
+        }
+        window.scrollTo(0, 0)
+      // eslint-disable-next-line
+    }, []);
+
     function Submit(e) {
         e.preventDefault();
         let ticketsData = JSON.parse(localStorage.getItem("ticketsDataB"));
@@ -23,6 +45,9 @@ const SelectClass = () => {
 
     const back = (e) => {
         e.preventDefault();
+        let ticketsData = JSON.parse(localStorage.getItem("ticketsDataB"));
+        let ticketsDataB = {...ticketsData, KelasPilihan: pilihanKelas.response}
+        localStorage.setItem("ticketsDataB", JSON.stringify(ticketsDataB));
         navigate('/buyticket')
     }
 
@@ -102,7 +127,8 @@ const SelectClass = () => {
                                         id="klinis"
                                         onChange={handleChange}
                                         style={{marginRight: "5px"}}
-                                    />
+                                        defaultChecked={JSON.parse(localStorage.getItem("ticketsDataB")) === null ? false : JSON.parse(localStorage.getItem("ticketsDataB")).KelasPilihan === undefined ? false : JSON.parse(localStorage.getItem('ticketsDataB')).KelasPilihan.includes("Klinis") ? true : false}
+                                        />
                                     Psikologi Klinis
                                 </label>
                             </div>
@@ -110,7 +136,7 @@ const SelectClass = () => {
                                 <label
                                     className="form-check-label"
                                     htmlFor="pendidikan"
-                                >
+                                    >
                                     <input
                                         className="form-check-input"
                                         type="checkbox"
@@ -119,7 +145,8 @@ const SelectClass = () => {
                                         id="pendidikan"
                                         onChange={handleChange}
                                         style={{marginRight: "5px"}}
-                                    />
+                                        defaultChecked={JSON.parse(localStorage.getItem("ticketsDataB")) === null ? false : JSON.parse(localStorage.getItem("ticketsDataB")).KelasPilihan === undefined ? false : JSON.parse(localStorage.getItem('ticketsDataB')).KelasPilihan.includes("Pendidikan") ? true : false}
+                                        />
                                 Psikologi Pendidikan
                                 </label>
                             </div>
@@ -136,7 +163,8 @@ const SelectClass = () => {
                                         id="perkembangan"
                                         onChange={handleChange}
                                         style={{marginRight: "5px"}}
-                                    />
+                                        defaultChecked={JSON.parse(localStorage.getItem("ticketsDataB")) === null ? false : JSON.parse(localStorage.getItem("ticketsDataB")).KelasPilihan === undefined ? false : JSON.parse(localStorage.getItem('ticketsDataB')).KelasPilihan.includes("Perkembangan") ? true : false}
+                                        />
                                     Psikologi Perkembangan
                                 </label>
                             </div>
@@ -144,7 +172,7 @@ const SelectClass = () => {
                                 <label
                                     className="form-check-label"
                                     htmlFor="pio"
-                                >
+                                    >
                                     <input
                                         className="form-check-input"
                                         type="checkbox"
@@ -153,7 +181,8 @@ const SelectClass = () => {
                                         id="pio"
                                         onChange={handleChange}
                                         style={{marginRight: "5px"}}
-                                    />
+                                        defaultChecked={JSON.parse(localStorage.getItem("ticketsDataB")) === null ? false : JSON.parse(localStorage.getItem("ticketsDataB")).KelasPilihan === undefined ? false : JSON.parse(localStorage.getItem('ticketsDataB')).KelasPilihan.includes("IndustridanOrganisasi") ? true : false}
+                                        />
                                     Psikologi Industri dan Organisasi
                                 </label>
                             </div>
@@ -161,7 +190,7 @@ const SelectClass = () => {
                                 <label
                                     className="form-check-label"
                                     htmlFor="sosial"
-                                >
+                                    >
                                     <input
                                         className="form-check-input"
                                         type="checkbox"
@@ -170,6 +199,7 @@ const SelectClass = () => {
                                         id="sosial"
                                         onChange={handleChange}
                                         style={{marginRight: "5px"}}
+                                        defaultChecked={JSON.parse(localStorage.getItem("ticketsDataB")) === null ? false : JSON.parse(localStorage.getItem("ticketsDataB")).KelasPilihan === undefined ? false : JSON.parse(localStorage.getItem('ticketsDataB')).KelasPilihan.includes("Sosial") ? true : false}
                                     />
                                     Psikologi Sosial
                                 </label>

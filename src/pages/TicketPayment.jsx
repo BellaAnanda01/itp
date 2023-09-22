@@ -18,15 +18,28 @@ const TicketPayment = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    if(localStorage.getItem("ticketsDataB") === null) {
+      navigate('/tickettypes')
+    }
+    window.scrollTo(0, 0)
+  // eslint-disable-next-line
+  }, []);
+
+  useEffect(() => {
     setTheBarcodeNumber(Math.floor(1000000000 + Math.random() * 9999999999));
-  }, [])
+  // eslint-disable-next-line
+  }, []);
 
   let UrlBarcodeNumber = `http://localhost:3000/eticket/${TheBarcodeNumber}`
 
   let ticketsData = JSON.parse(localStorage.getItem("ticketsDataB"));
-  let ticketDataReturn = Object.entries(ticketsData).map(([key, value]) => {
-    return (<input style={{display: "none"}} key={key} name={key} type='text' defaultValue={value}/>)
-  })
+  let ticketDataReturn = ""
+
+  if(ticketsData !== null) {
+    ticketDataReturn = Object.entries(ticketsData).map(([key, value]) => {
+      return (<input style={{display: "none"}} key={key} name={key} type='text' defaultValue={value}/>)
+    })
+  }
 
   function HandleChange(e) {
     e.preventDefault();
@@ -69,6 +82,7 @@ const TicketPayment = () => {
       JenisTiket: `${ticketsData.JenisTiket}`,
       NamaLengkap: `${ticketsData.NamaLengkap}`,
       KelasPilihan: `${ticketsData.KelasPilihan}`,
+      NoWhatsApp: `${ticketsData.NoWhatsApp}`,
       BarcodeNumber: TheBarcodeNumber
   }
   
@@ -100,7 +114,6 @@ const TicketPayment = () => {
       }
     )
       .then(() => {
-        localStorage.removeItem('tipetiket')
         localStorage.removeItem('ticketsDataB')
         navigate("/ticketsuccess")}
       )

@@ -19,9 +19,9 @@ Develop/ticket merupakan bagian dari pengembangan website ITP yang berfokus pada
 11. Buat page e-ticket dengan url "eticket/[nomor barcodenya]", sehingga butuh:
 - ambil data dari backend ✅
 - cek ada barcode atau ga, klo ga di "tidak ditemukan" --> itu aja masukin page not found klo gaada, klo ada masukin design e-ticket ✅
+12. Masukin design semua page (setengah jadi) ✅
 
 ## Yang Belum Selesai
------- 18 Sept ------
-1. Masukin design semua page (setengah jadi)
+
 
 ## Masalah Yang Perlu Diselesaikan

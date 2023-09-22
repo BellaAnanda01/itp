@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useNavigate } from "react-router-dom";
 import background from '../assets/background2.png'
 import element from '../assets/element.png'
@@ -8,6 +8,14 @@ const Ticket = () => {
     const form = useRef();
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+      if(localStorage.getItem("tipetiket") === null) {
+          navigate('/tickettypes')
+      }
+      window.scrollTo(0, 0)
+    // eslint-disable-next-line
+    }, []);
 
     const ticketsData = {
       "JenisTiket": ""
@@ -23,9 +31,16 @@ const Ticket = () => {
       for (const pair of formDatab.entries()) {
         ticketsData[pair[0]] = pair[1];
       }
-      let ticketsDataB = JSON.stringify(ticketsData)
-      console.log(ticketsDataB)
-      localStorage.setItem("ticketsDataB",ticketsDataB);
+      let getKelasPilihan = JSON.parse(localStorage.getItem("ticketsDataB"))
+      if (getKelasPilihan === null) {
+        let ticketsDataB = JSON.stringify(ticketsData);
+        localStorage.setItem("ticketsDataB",ticketsDataB);
+      } else {
+        let getPilihanKelas = JSON.parse(localStorage.getItem('ticketsDataB')).KelasPilihan
+        ticketsData.KelasPilihan = getPilihanKelas
+        let ticketsDataB = JSON.stringify(ticketsData)
+        localStorage.setItem("ticketsDataB",ticketsDataB);
+      }
       const tipetiket = localStorage.getItem('tipetiket');
       if(tipetiket === 'Offline') {
         navigate('/selectclass');
@@ -100,7 +115,7 @@ const Ticket = () => {
                   border: 'none',
                   height: '38px',
                   fontSize: '16px',
-                }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" name='NamaLengkap' type='text' required/>
+                }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" name='NamaLengkap' type='text' defaultValue={localStorage.getItem('ticketsDataB') === null ? "" : JSON.parse(localStorage.getItem('ticketsDataB')).NamaLengkap} required/>
               </div>
               {/* Email */}
               <div style={{margin: "20px 0"}}>
@@ -126,7 +141,7 @@ const Ticket = () => {
                   border: 'none',
                   height: '38px',
                   fontSize: '16px',
-                }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" name='Email' type='text' required/>
+                }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" name='Email' type="email" defaultValue={localStorage.getItem('ticketsDataB') === null ? "" : JSON.parse(localStorage.getItem('ticketsDataB')).Email} required/>
               </div>
             </div>
             <div>
@@ -154,7 +169,7 @@ const Ticket = () => {
                   border: 'none',
                   height: '38px',
                   fontSize: '16px',
-                }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" name='IDLINE' type='text' required/>
+                }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" name='IDLINE' type='text' defaultValue={localStorage.getItem('ticketsDataB') === null ? "" : JSON.parse(localStorage.getItem('ticketsDataB')).IDLINE} required/>
               </div>
               {/* No. WhatsApp */}
               <div style={{margin: "20px 0"}}>
@@ -180,7 +195,7 @@ const Ticket = () => {
                   border: 'none',
                   height: '38px',
                   fontSize: '16px',
-                }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" name='NoWhatsApp' type='number' required/>
+                }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" name='NoWhatsApp' type='number' defaultValue={localStorage.getItem('ticketsDataB') === null ? "" : JSON.parse(localStorage.getItem('ticketsDataB')).NoWhatsApp} required/>
               </div>
               {/* Asal Sekolah */}
               <div style={{margin: "20px 0"}}>
@@ -206,7 +221,7 @@ const Ticket = () => {
                   border: 'none',
                   height: '38px',
                   fontSize: '16px',
-                }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" name='AsalSekolah' type='text' required/>
+                }} className="w-[70vw] sm:w-[30vw] sm:max-w-[300px]" name='AsalSekolah' type='text' defaultValue={localStorage.getItem('ticketsDataB') === null ? "" : JSON.parse(localStorage.getItem('ticketsDataB')).AsalSekolah} required/>
               </div>
             </div>
           </div>

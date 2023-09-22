@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import background from '../assets/background2.png'
 import { Link } from 'react-router-dom'
 
 const TicketSuccess = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <div>
       <div style={{backgroundImage: `url(${background})`, backgroundAttachment: "scroll", backgroundSize: 'cover', backgroundPosition: "bottom center", minHeight: "100vh"}}>

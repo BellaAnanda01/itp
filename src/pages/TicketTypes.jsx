@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { styled } from 'styled-components'
 import background from '../assets/background2.png'
 import element from '../assets/element.png'
 import { useNavigate } from 'react-router-dom'
 
 const TicketTypes = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const Background = styled.div`
         background-image: url(${background});
         background-attachment: scroll;
