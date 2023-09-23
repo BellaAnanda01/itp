@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { styled } from 'styled-components'
 import background from '../assets/background2.png'
 import element from '../assets/element.png'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const TicketTypes = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const Background = styled.div`
         background-image: url(${background});
         background-attachment: scroll;
@@ -14,7 +18,7 @@ const TicketTypes = () => {
     `
 
     const Div = styled.div`
-        height: 100vh;
+        min-height: 100vh;
         width: 100vw;
         display: flex;
         justify-content: center;
@@ -28,15 +32,15 @@ const TicketTypes = () => {
         align-items: center;
         flex-direction: column;
         height: max-content;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
         @media only screen and (max-width: 600px) {
-            margin-bottom: 60px;
+            margin-bottom: 30px;
         }
     `
 
     const DivH1 = styled.p`
         font-family: 'Chewy', cursive;
-        padding-top: 40px;
+        /* padding-top: 40px; */
         text-align: center;
         font-size: 5vw;
         color: white;
@@ -45,6 +49,7 @@ const TicketTypes = () => {
         margin: 0;
         @media only screen and (max-width: 600px) {
             font-size: 40px;
+            padding-top: 40px;
         }
     `
     const DivH1el = styled.img`
@@ -88,12 +93,19 @@ const TicketTypes = () => {
         text-shadow: 0.04419417em 0.04419417em 0em rgba(0, 0, 0, 0.500000);
     `
 
-    const SecondDivTicketsP = styled.p`
+    const SecondDivTicketsP = styled.button`
         font-family: 'Sniglet', cursive;
         text-align: center;
         margin: 0;
     `
 
+    const navigate = useNavigate()
+
+    function buttonValue(e, value) {
+        e.preventDefault();
+        localStorage.setItem('tipetiket', value);
+        navigate("/buyticket");
+    }
 
     return (
         <div>
@@ -105,16 +117,20 @@ const TicketTypes = () => {
                     </DivTitle>
                     <SecondDivTickets>
                         <SecondDivTicketsBackground>
-                            <SecondDivTicketsH style={{color: "#2f6eed"}}>Sharing S-1</SecondDivTicketsH>
-                            <SecondDivTicketsP style={{marginBottom: 0}}>Sabtu, 23 September 2023</SecondDivTicketsP>
-                            <SecondDivTicketsP style={{marginTop: 0}}>(Via Zoom Meeting)</SecondDivTicketsP>
-                            <SecondDivTicketsP style={{margin: "10px 0 15px"}}>Free</SecondDivTicketsP>
-                            <Link to={`/buyticket`} style={{textDecoration: "none"}}><SecondDivTicketsP style={{backgroundColor: "#ff4747", color: "white", padding: "8px", borderRadius: "8px"}}>Get Your Tickets Now!</SecondDivTicketsP></Link>
+                            <SecondDivTicketsH style={{color: "#2f6eed"}}>Open House</SecondDivTicketsH>
+                            <SecondDivTicketsP style={{marginBottom: 0}}>Sabtu, 11 November 2023</SecondDivTicketsP>
+                            <b><SecondDivTicketsP style={{marginTop: 0}}>at Fakultas Psikologi UI</SecondDivTicketsP></b>
+                            <SecondDivTicketsP style={{margin: "10px 0 0"}}>Pre Sale 1:</SecondDivTicketsP>
+                            <SecondDivTicketsP style={{margin: "0 0 15px"}}>Rp40.000</SecondDivTicketsP>
+                            <button onClick={(e) => buttonValue(e, 'Offline')} style={{fontFamily: "'Sniglet', cursive", textAlign: "center", margin: 0, backgroundColor: "#ff4747", color: "white", padding: "8px", borderRadius: "8px"}}>Get Your Tickets Now!</button>
                         </SecondDivTicketsBackground>
                         <SecondDivTicketsBackground>
-                            <SecondDivTicketsH style={{color: "#61ab4b"}}>Open House</SecondDivTicketsH>
-                            <SecondDivTicketsP>Sabtu, 11 November 2023</SecondDivTicketsP>
-                            <SecondDivTicketsP style={{color: "#ff4747", marginTop: "10px"}}>Available Soon!</SecondDivTicketsP>
+                            <SecondDivTicketsH style={{color: "#2f6eed"}}>Open House</SecondDivTicketsH>
+                            <SecondDivTicketsP style={{marginBottom: 0}}>Sabtu, 11 November 2023</SecondDivTicketsP>
+                            <b><SecondDivTicketsP style={{marginTop: 0}}>via Zoom Meeting</SecondDivTicketsP></b>
+                            <SecondDivTicketsP style={{margin: "10px 0 0"}}>Pre Sale 1:</SecondDivTicketsP>
+                            <SecondDivTicketsP style={{margin: "0 0 15px"}}>Rp25.000</SecondDivTicketsP>
+                            <button onClick={(e) => buttonValue(e, 'Online')} style={{fontFamily: "'Sniglet', cursive", textAlign: "center", margin: 0, backgroundColor: "#ff4747", color: "white", padding: "8px", borderRadius: "8px"}}>Get Your Tickets Now!</button>
                         </SecondDivTicketsBackground>
                     </SecondDivTickets>
                 </Div>

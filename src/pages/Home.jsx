@@ -4,7 +4,6 @@ import Hero from '../components/Div1'
 import background from '../assets/background-top.png'
 import Div2 from '../components/Div2'
 import Div3 from '../components/Div3'
-import Navbar from '../components/Navbar'
 
 const Home = () => {
   const Background = styled.div`
