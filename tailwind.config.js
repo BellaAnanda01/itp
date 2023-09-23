@@ -6,7 +6,10 @@ module.exports = {
     theme: {
         fontFamily: {
             'sniglet': ['Sniglet'],
-            'chewy': ['Chewy']
+            'chewy': ['Chewy'],
+            'codecpro': ['Codecpro'],
+            'poppins': ['Poppins'],
+            'berkshireSwash': ['Berkshire Swash']
         }
     },
     plugins: [],
