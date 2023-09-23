@@ -66,7 +66,7 @@ const Div3 = () => {
     <div>
         <ThirdDiv>
             <ThirdDivDiv>
-                <ThirdDivH>Yuk, beli tiket ITP sekarang!</ThirdDivH>
+                <ThirdDivH style={{color: "#ff7b58", textShadow: "0.04419417em 0.04419417em 0em rgba(0, 0, 0, 1.000000)"}}>Beli tiket Open House ITP di sini!!</ThirdDivH>
                 <Link to={`/tickettypes`} style={{textDecoration: "none"}}><ThirdDivButton style={{backgroundColor: "#FF678B"}}>BUY TICKETS</ThirdDivButton></Link>
             </ThirdDivDiv>
             {/* <ThirdDivDiv>
