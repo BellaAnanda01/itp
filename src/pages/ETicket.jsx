@@ -74,9 +74,9 @@ const ETicket = () => {
                 <p>Date</p>
                 <p>: Saturday, 11 November 2023</p>
                 <p>Open Gate</p>
-                <p>: {data[1] === "Open House - Offline" ? "08:00 WIB" : "08:40 WIB"}</p>
+                <p>: {data[1] === "Open House - Offline" ? "08:00 WIB" : data[1] === "Open House - Online" ? "08:40 WIB" : "Loading..."}</p>
                 <p>Place</p>
-                <p>: {data[1] === "Open House - Offline" ? "Fakultas Psikologi UI" : "Zoom Meeting"}</p>
+                <p>: {data[1] === "Open House - Offline" ? "Fakultas Psikologi UI" : data[1] === "Open House - Online" ? "Zoom Meeting" : "Loading..."}</p>
               </div>
               <div className="flex justify-center items-center my-[10px]">
                 <Barcode value={data[4]} height="40" displayValue="true" background="transparent"/>
