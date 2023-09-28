@@ -13,6 +13,7 @@ const TicketPayment = () => {
   let [loadingChange, setLoadingChange] = useState(false);
   let [loadingSubmit, setLoadingSubmit] = useState(false);
   let [TheBarcodeNumber, setTheBarcodeNumber] = useState(0)
+  let [TheBuktiBayar, setTheBuktiBayar] = useState("")
   const image = useRef("")
   const form = useRef();
   const navigate = useNavigate();
@@ -69,6 +70,7 @@ const TicketPayment = () => {
         () => {
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                 document.querySelector(".imageurl").value = downloadURL
+                setTheBuktiBayar(downloadURL)
                 setLoadingChange(false)
             });
         }
@@ -81,8 +83,10 @@ const TicketPayment = () => {
     const postData = {
       JenisTiket: `${ticketsData.JenisTiket}`,
       NamaLengkap: `${ticketsData.NamaLengkap}`,
-      KelasPilihan: `${ticketsData.KelasPilihan}`,
+      Email: `${ticketsData.Email}`,
       NoWhatsApp: `${ticketsData.NoWhatsApp}`,
+      KelasPilihan: `${ticketsData.KelasPilihan}`,
+      BuktiBayar: TheBuktiBayar,
       BarcodeNumber: TheBarcodeNumber
   }
   
