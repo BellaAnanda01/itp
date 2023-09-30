@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import PageNotFound from './PageNotFound';
 import sponsor from '../assets/sponsor.png'
 import medpar from '../assets/medpar.png'
+import PageNotFound2 from './PageNotFound2';
 var Barcode = require('react-barcode');
 
 const ETicket = () => {
@@ -30,7 +30,8 @@ const ETicket = () => {
 
   return (
     <div>
-      {data && 
+      <PageNotFound2 />
+      {/* {data && 
       <div>
         <div style={{minHeight: "calc(100vh - 120px)", backgroundColor: "#faf0db", padding: "20px 0"}}>
           <p className='text-center font-sniglet text-[40px] pb-[20px]'>Your Ticket</p>
@@ -85,7 +86,7 @@ const ETicket = () => {
           </div>
         </div>
       </div>}
-      {!data && <PageNotFound />}
+      {!data && <PageNotFound2 />} */}
     </div>
   )
 }
