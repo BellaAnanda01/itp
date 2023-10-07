@@ -176,7 +176,7 @@ const TicketPayment = () => {
               fontFamily: 'Sniglet, cursive',
               marginLeft: '5px',
               marginBottom: "10px"
-            }}>Bukti pembayaran<br/><span style={{lineHeight: '0',fontSize: "14px", margin: "0"}}>Yang harus dibayar: {localStorage.getItem('tipetiket') === "Offline" ? "Rp40.000" : "Rp25.000"}</span></p>
+            }}>Bukti pembayaran<br/><span style={{lineHeight: '0',fontSize: "14px", margin: "0"}}>Yang harus dibayar: {localStorage.getItem('tipetiket') === "Offline" ? "Rp45.000" : localStorage.getItem('tipetiket') === "Online" ? "Rp30.000" : "Loading..."}</span></p>
           </div>
           <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
             <PulseLoader

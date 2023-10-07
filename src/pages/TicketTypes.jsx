@@ -121,7 +121,7 @@ const TicketTypes = () => {
                             <SecondDivTicketsP style={{marginBottom: 0}}>Sabtu, 11 November 2023</SecondDivTicketsP>
                             <b><SecondDivTicketsP style={{marginTop: 0}}>at Fakultas Psikologi UI</SecondDivTicketsP></b>
                             <SecondDivTicketsP style={{margin: "10px 0 0"}}>Pre Sale 1:</SecondDivTicketsP>
-                            <SecondDivTicketsP style={{margin: "0 0 15px"}}>Rp40.000</SecondDivTicketsP>
+                            <SecondDivTicketsP style={{margin: "0 0 15px"}}>Rp45.000</SecondDivTicketsP>
                             <button onClick={(e) => buttonValue(e, 'Offline')} style={{fontFamily: "'Sniglet', cursive", textAlign: "center", margin: 0, backgroundColor: "#ff4747", color: "white", padding: "8px", borderRadius: "8px"}}>Get Your Tickets Now!</button>
                         </SecondDivTicketsBackground>
                         <SecondDivTicketsBackground>
@@ -129,7 +129,7 @@ const TicketTypes = () => {
                             <SecondDivTicketsP style={{marginBottom: 0}}>Sabtu, 11 November 2023</SecondDivTicketsP>
                             <b><SecondDivTicketsP style={{marginTop: 0}}>via Zoom Meeting</SecondDivTicketsP></b>
                             <SecondDivTicketsP style={{margin: "10px 0 0"}}>Pre Sale 1:</SecondDivTicketsP>
-                            <SecondDivTicketsP style={{margin: "0 0 15px"}}>Rp25.000</SecondDivTicketsP>
+                            <SecondDivTicketsP style={{margin: "0 0 15px"}}>Rp30.000</SecondDivTicketsP>
                             <button onClick={(e) => buttonValue(e, 'Online')} style={{fontFamily: "'Sniglet', cursive", textAlign: "center", margin: 0, backgroundColor: "#ff4747", color: "white", padding: "8px", borderRadius: "8px"}}>Get Your Tickets Now!</button>
                         </SecondDivTicketsBackground>
                     </SecondDivTickets>
