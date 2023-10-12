@@ -103,7 +103,7 @@ const TicketPayment = () => {
     
     const formEle = document.querySelector("form");
     e.preventDefault()
-    emailjs.sendForm('service_xctzzvd', 'template_95gj8rw', form.current, 'TZhEcRcr-wp0i3YYA')
+    emailjs.sendForm('service_wwoj43u', 'template_0hf90dt', form.current, 'ffVT7qrXXyNA7nmt4')
     .then((result) => {
         console.log(result.text);
     }, (error) => {
