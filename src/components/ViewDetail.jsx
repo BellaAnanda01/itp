@@ -151,7 +151,7 @@ const ViewDetail = ({code, viewDetail, setViewDetail}) => {
                     <img src={sizeImg} alt="" style={{width: "70vw", maxWidth: "300px", display: "block", margin: "0 auto", marginTop: "10px"}}/>
                     <p>Jika memilih ukuran XXL, maka akan dikenakan biaya tambahan Rp10.000</p>
                     <p>Jika memilih lengan panjang, maka akan dikenakan biaya tambahan Rp10.000</p>
-                    <p style={{marginBottom: "30px"}}>Jika ingin memilih ukuran lain, silakan hubungi xyz</p>
+                    <p style={{marginBottom: "30px"}}>Jika ingin memilih ukuran lain, silakan hubungi Dinda (WA: 085967070964 | ID LINE: dinda072)</p>
                 </div>
             ) : ""}
             <p>{!code ? "" : option.size ? (
