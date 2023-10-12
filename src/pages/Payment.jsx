@@ -51,7 +51,7 @@ const Payment = ({values}) => {
         BuktiBayar: imgUrl,
     }
 
-    fetch("http://localhost:5505/order/",
+    fetch("https://itp-merchbackend.vercel.app/order/",
         {
             method: "POST",
             headers: {
