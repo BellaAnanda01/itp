@@ -152,6 +152,7 @@ const ShowProducts = () => {
                     <div>
                       <p className='text-xl'>Bundle 2</p>
                       <p className='text-xs'>Keychain: {item.keychain}</p>
+                      <p className='text-xs'>Warna Baju: {item.warnaBaju}</p>
                       <p className='text-xs'>Ukuran: {item.size}</p>
                       <p className='text-xs'>Lengan: {item.lengan}</p>
                       <p className='text-l mb-[5px]'>{formatRupiah(item.price)}</p>
@@ -171,6 +172,7 @@ const ShowProducts = () => {
                     <div>
                       <p className='text-xl'>Bundle 3</p>
                       <p className='text-xs'>Keychain: {item.keychain}</p>
+                      <p className='text-xs'>Warna Baju: {item.warnaBaju}</p>
                       <p className='text-xs'>Ukuran: {item.size}</p>
                       <p className='text-xs'>Lengan: {item.lengan}</p>
                       <p className='text-l mb-[5px]'>{formatRupiah(item.price)}</p>

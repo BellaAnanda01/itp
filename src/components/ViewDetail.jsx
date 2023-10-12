@@ -3,6 +3,7 @@ import { FundraiseProducts } from '../data';
 import sizeImg from '../assets/Size.png'
 
 const ViewDetail = ({code, viewDetail, setViewDetail}) => {
+    const [selectedWarnaBaju, setSelectedWarnaBaju] = useState("");
     const [selectedSize, setSelectedSize] = useState("");
     const [selectedLengan, setSelectedLengan] = useState("");
     const [selectedKeychain, setSelectedKeychain] = useState("");
@@ -36,6 +37,7 @@ const ViewDetail = ({code, viewDetail, setViewDetail}) => {
         }
 
         const newItem = {
+            warnaBaju: selectedWarnaBaju,
             size: selectedSize,
             lengan: selectedLengan,
             keychain: selectedKeychain,
@@ -47,7 +49,7 @@ const ViewDetail = ({code, viewDetail, setViewDetail}) => {
             let check = true
             for (let index = 0; index < merch[code].length; index++) {
                 const element = merch[code][index];
-                if(element.size === selectedSize && element.lengan === selectedLengan && element.keychain === selectedKeychain) {
+                if(element.warnaBaju === selectedWarnaBaju && element.size === selectedSize && element.lengan === selectedLengan && element.keychain === selectedKeychain) {
                     element.quantity = element.quantity + selectedQuantity
                     element.price = element.price + totalPrice * selectedQuantity
                     check = false
@@ -98,6 +100,7 @@ const ViewDetail = ({code, viewDetail, setViewDetail}) => {
                         {merchandise[code].map((item, index) =>
                             (
                                 <div key={index} style={{borderBottom: "1.5px solid black", display: "block"}}>
+                                    {item.warnaBaju ? <p>Warna Baju: {item.warnaBaju}</p> : ""}
                                     {item.size ? <p>Size: {item.size}</p> : ""}
                                     {item.lengan ? <p>Lengan: {item.lengan}</p> : ""}
                                     {item.keychain ? <p>Keychain: {item.keychain}</p> : ""}
@@ -154,6 +157,21 @@ const ViewDetail = ({code, viewDetail, setViewDetail}) => {
                     <p style={{marginBottom: "30px"}}>Jika ingin memilih ukuran lain, silakan hubungi Dinda (WA: 085967070964 | ID LINE: dinda072)</p>
                 </div>
             ) : ""}
+            <p>{!code ? "" : option.warnaBaju ? (
+                <div>
+                    <p>Pilihan Warna Baju</p>
+                    <select style={{width: "140px", border: "solid 1px black", borderRadius: "20px", padding: "0 5px"}}
+                        onChange={(e) => {
+                            setSelectedWarnaBaju(e.target.value);
+                        }}
+                    >
+                        <option value="" selected disabled>Pilih Warna Baju</option>
+                        {option.warnaBaju.map((i) => (
+                            <option value={i}>{i}</option>
+                        ))}
+                    </select>
+                </div>
+            ) : ""}</p>
             <p>{!code ? "" : option.size ? (
                 <div>
                     <p>Pilihan Ukuran</p>
@@ -263,9 +281,24 @@ const ViewDetail = ({code, viewDetail, setViewDetail}) => {
                         <img src={sizeImg} alt="" style={{width: "70vw", maxWidth: "300px", display: "block", margin: "0 auto", marginTop: "10px"}}/>
                         <p>Jika memilih ukuran XXL, maka akan dikenakan biaya tambahan Rp10.000</p>
                         <p>Jika memilih lengan panjang, maka akan dikenakan biaya tambahan Rp10.000</p>
-                        <p style={{marginBottom: "30px"}}>Jika ingin memilih ukuran lain, silakan hubungi xyz</p>
+                        <p style={{marginBottom: "30px"}}>Jika ingin memilih ukuran lain, silakan hubungi Dinda (WA: 085967070964 | ID LINE: dinda072)</p>
                     </div>
                 ) : ""}
+                <p>{!code ? "" : option.warnaBaju ? (
+                    <div>
+                        <p>Pilihan Warna Baju</p>
+                        <select style={{width: "140px", border: "solid 1px black", borderRadius: "20px", padding: "0 5px"}}
+                            onChange={(e) => {
+                                setSelectedWarnaBaju(e.target.value);
+                            }}
+                        >
+                            <option value="" selected disabled>Pilih Warna Baju</option>
+                            {option.warnaBaju.map((i) => (
+                                <option value={i}>{i}</option>
+                            ))}
+                        </select>
+                    </div>
+                ) : ""}</p>
                 <p>{!code ? "" : option.size ? (
                     <div>
                         <p>Pilihan Ukuran</p>

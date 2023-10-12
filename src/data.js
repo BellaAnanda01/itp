@@ -105,7 +105,8 @@ export const FundraiseProducts = [{
     "Type": {
         "keychain": ["Ito", "FPsi", "UI"],
         "size": ["S", "M", "L", "XL", "XXL"],
-        "lengan": ["Pendek", "Panjang"]
+        "lengan": ["Pendek", "Panjang"],
+        "warnaBaju": ["Putih", "Hitam"]
     },
     "Detail": true,
     "__v": 0
@@ -120,7 +121,8 @@ export const FundraiseProducts = [{
     "Type": {
         "keychain": ["Ito", "FPsi", "UI"],
         "size": ["S", "M", "L", "XL", "XXL"],
-        "lengan": ["Pendek", "Panjang"]
+        "lengan": ["Pendek", "Panjang"],
+        "warnaBaju": ["Putih", "Hitam"]
     },
     "Detail": true,
     "__v": 0
