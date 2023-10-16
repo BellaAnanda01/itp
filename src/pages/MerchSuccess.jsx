@@ -12,7 +12,7 @@ const MerchSuccess = () => {
           backgroundColor: "#E9E3D7",
           borderRadius: "20px",
           position: "absolute",
-          top: "45%",
+          top: "calc(45% + 64px)",
           left: "50%",
           transform: "translate(-50%, -50%)",
           fontFamily: 'Sniglet, cursive',
