@@ -136,7 +136,7 @@ const Hero = () => {
                   <P style={{color: '#98d672'}}>Psychology</P>
                 </LeftFirstDivP2>
                 <LeftFirstDivP3>
-                ITP merupakan program kerja Biro Hubungan Masyarakat BEM Fakultas Psikologi UI yang bertujuan untuk mengenalkan ilmu Psikologi dan Fakultas Psikologi UI ke siswa-siswi SMA/sederajat. 
+                ITP merupakan acara Open House Fakultas Psikologi UI yang berada di bawah naungan Biro Hubungan Masyarakat dan Biro Kewirausahaan BEM Fakultas Psikologi UI. 
                 </LeftFirstDivP3>
               </LeftFirstDivDiv>
             </LeftFirstDiv>

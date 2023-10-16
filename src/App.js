@@ -16,6 +16,9 @@ import SelectClass from './pages/SelectClass';
 import TicketPayment from './pages/TicketPayment';
 import ETicket from './pages/ETicket';
 import PageNotFound from './pages/PageNotFound';
+import Products from './pages/Products';
+import CheckOut from './pages/CheckOut';
+import MerchSuccess from './pages/MerchSuccess';
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
         <Route path="/eticket/:id" element={<ETicket />} />
         <Route path="/test" element={<Test />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/merchsuccess" element={<MerchSuccess />} />
       </Routes>
       <Footer />
     </BrowserRouter>
