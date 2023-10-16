@@ -23,7 +23,7 @@ const MerchSuccess = () => {
           flexDirection: "column",
           textAlign: 'center',
         }}>
-          <p style={{lineHeight: "24px"}}>Pre-Order Merchandise Batch 1<br/><span style={{backgroundColor: "rgba(239, 162, 162, 0.40)", padding: "1.5px"}}><b>21 Agustus-25 Agustus 2023</b></span></p>
+          <p style={{lineHeight: "24px"}}>Pre-Order Merchandise Batch 2<br/><span style={{backgroundColor: "rgba(239, 162, 162, 0.40)", padding: "1.5px"}}><b>16 Oktober-23 Oktober 2023</b></span></p>
           <p style={{
             fontFamily: "Chewy, cursive",
             fontSize: "21px",
