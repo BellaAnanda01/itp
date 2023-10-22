@@ -195,7 +195,7 @@ const CheckOut2 = () => {
         </div>
         <div className='mx-[auto] font-sniglet my-2 w-[70vw] max-w-[700px]'>
           <p className='mb-1'>Pengambilan Barang</p>
-          <div className='flex'><input type='radio' name='PengambilanBarang' className='w-[15px] mr-[5px]' value="Fakultas Psikologi UI" onChange={(e) => handleRadio(e.target.value)} required/>Fakultas Psikologi UI</div>
+          <div className='flex'><input type='radio' name='PengambilanBarang' className='w-[15px] mr-[5px]' value="Fakultas Psikologi UI" onChange={(e) => handleRadio(e.target.value)} required/>Fakultas Psikologi UI (saat acara Open House)</div>
           <div className='flex'><input type='radio' name='PengambilanBarang' className='w-[15px] mr-[5px]' value="Dikirim berdasarkan alamat" onChange={(e) => handleRadio(e.target.value)} required/>Dikirim berdasarkan alamat</div>
         </div>
       </div>
