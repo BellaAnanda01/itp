@@ -122,7 +122,7 @@ const TicketTypes = () => {
                             <b><SecondDivTicketsP style={{marginTop: 0}}>at Fakultas Psikologi UI</SecondDivTicketsP></b>
                             <SecondDivTicketsP style={{margin: "10px 0 0"}}>Normal Price:</SecondDivTicketsP>
                             <SecondDivTicketsP style={{margin: "0 0 15px"}}>Rp55.000</SecondDivTicketsP>
-                            <button onClick={(e) => buttonValue(e, 'Offline')} style={{fontFamily: "'Sniglet', cursive", textAlign: "center", margin: 0, backgroundColor: "#ff4747", color: "white", padding: "8px", borderRadius: "8px"}} disabled>SOLD OUT</button>
+                            <button onClick={(e) => buttonValue(e, 'Offline')} style={{fontFamily: "'Sniglet', cursive", textAlign: "center", margin: 0, backgroundColor: "#ff9494", color: "white", padding: "8px", borderRadius: "8px"}} disabled>SOLD OUT</button>
                         </SecondDivTicketsBackground>
                         <SecondDivTicketsBackground>
                             <SecondDivTicketsH style={{color: "#2f6eed"}}>Open House</SecondDivTicketsH>
