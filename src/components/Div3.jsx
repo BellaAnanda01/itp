@@ -7,7 +7,8 @@ const Div3 = () => {
         min-height: 100vh;
         min-width: 100vw;
         display: grid;
-        grid-template-columns: 50vw 50vw;
+        // grid-template-columns: 50vw 50vw;
+        grid-template-columns: 100vw;
         justify-content: center;
         align-items: center;
         @media only screen and (max-width: 1000px) {
