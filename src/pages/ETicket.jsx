@@ -84,7 +84,7 @@ const ETicket = () => {
                 <p style={{paddingRight: "15px"}}>Ticket Owner</p>
                 <p>: {data.NamaLengkap}</p>
                 <p style={{paddingRight: "15px"}}>Kelas</p>
-                <p>: {data.Kelas}</p>
+                <p>: Psikologi {data.Kelas}</p>
                 <p>Date</p>
                 <p>: Saturday, 11 November 2023</p>
                 <p>Open Gate</p>
