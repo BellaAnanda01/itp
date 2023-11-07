@@ -2,19 +2,29 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import sponsor from '../assets/sponsor.png'
 import medpar from '../assets/medpar.png'
-import PageNotFound2 from './PageNotFound2';
+import PageNotFound from './PageNotFound';
+import PageNotFound3 from './PageNotFound3';
 var Barcode = require('react-barcode');
 
 const ETicket = () => {
   let [data, setData] = useState([])
+  let [loading, setLoading] = useState(true)
   const { id } = useParams();
 
   const fetchTicketData = async () => {
     try {
-        let response = await fetch(`https://itp-ticketbackend.vercel.app/ticket/${id}`);
-        const result = await response.json();
-        const theResult = Object.values(result)
-        setData(theResult)
+        // let response = await fetch(`https://itp-ticketbackend.vercel.app/ticket/${id}`);
+        // const result = await response.json();
+        // const theResult = Object.values(result)
+        // setData(theResult)
+        fetch(`https://itp-ticketbackend.vercel.app/ticket/${id}`)
+      .then(response => {
+        setLoading(false)
+        return response.json()
+      })
+      .then(data => {
+        setData(data)
+      })
     }
     catch (error){
         setData("")
@@ -30,8 +40,9 @@ const ETicket = () => {
 
   return (
     <div>
-      <PageNotFound2 />
-      {/* {data && 
+      {/* <PageNotFound2 /> */}
+      {loading && <PageNotFound3/>}
+      {!loading && data.NamaLengkap && 
       <div>
         <div style={{minHeight: "calc(100vh - 120px)", backgroundColor: "#faf0db", padding: "20px 0"}}>
           <p className='text-center font-sniglet text-[40px] pb-[20px]'>Your Ticket</p>
@@ -54,7 +65,7 @@ const ETicket = () => {
                 </div>
                 <div>
                   <p style={{color: "white"}} className='text-right'>Media Partner</p>
-                  <img alt={"Open House Psikologi UI"} src={medpar}/>
+                  <img width={"148px"} alt={"Open House Psikologi UI"} src={medpar}/>
                 </div>
               </div>
             </div>
@@ -71,22 +82,24 @@ const ETicket = () => {
             <div style={{backgroundColor: "#A2A2A2", borderBottomRightRadius: "15px", borderBottomLeftRadius: "15px", paddingBottom: "20px"}}>
               <div style={{display: 'grid', gridTemplateColumns: "auto auto", justifyContent: "center", paddingTop: "5px"}} className='font-codecpro px-[25px]'>
                 <p style={{paddingRight: "15px"}}>Ticket Owner</p>
-                <p>: {data[2]}</p>
+                <p>: {data.NamaLengkap}</p>
+                <p style={{paddingRight: "15px"}}>Kelas</p>
+                <p>: {data.Kelas}</p>
                 <p>Date</p>
                 <p>: Saturday, 11 November 2023</p>
                 <p>Open Gate</p>
-                <p>: {data[1] === "Open House - Offline" ? "08:00 WIB" : data[1] === "Open House - Online" ? "08:40 WIB" : "Loading..."}</p>
+                <p>: {data.JenisTiket === "Open House - Offline" ? "08:00 WIB" : data.JenisTiket === "Open House - Online" ? "08:40 WIB" : "Loading..."}</p>
                 <p>Place</p>
-                <p>: {data[1] === "Open House - Offline" ? "Fakultas Psikologi UI" : data[1] === "Open House - Online" ? "Zoom Meeting" : "Loading..."}</p>
+                <p>: {data.JenisTiket === "Open House - Offline" ? "Fakultas Psikologi UI" : data.JenisTiket === "Open House - Online" ? "Zoom Meeting" : "Loading..."}</p>
               </div>
               <div className="flex justify-center items-center my-[10px]">
-                <Barcode value={data[4]} height="40" displayValue="true" background="transparent"/>
+                <Barcode value={data.BarcodeNumber} height="40" displayValue="true" background="transparent"/>
               </div>
             </div>
           </div>
         </div>
       </div>}
-      {!data && <PageNotFound2 />} */}
+      {!loading && !data.NamaLengkap && <PageNotFound />}
     </div>
   )
 }
