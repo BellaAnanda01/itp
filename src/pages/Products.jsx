@@ -72,7 +72,7 @@ const Products = () => {
           <p style={{
             padding: "20px", margin: 0, fontFamily: 'Sniglet, cursive', letterSpacing: '0.03em', fontSize: "30px"
             }}
-            >Our Products</p>
+            >Our Products (Pembelian merch sudah ditutup)</p>
           <form>
             <div style={{marginBottom: "20px"}}>
               <div style={{
