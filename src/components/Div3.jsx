@@ -71,7 +71,7 @@ const Div3 = () => {
                 <Link to={`/tickettypes`} style={{textDecoration: "none"}}><ThirdDivButton style={{backgroundColor: "#FF678B"}}>BUY TICKETS</ThirdDivButton></Link>
             </ThirdDivDiv>
              <ThirdDivDiv>
-                <ThirdDivH>Yuk, lihat-lihat yang kami jual!</ThirdDivH>
+                <ThirdDivH>Yuk, lihat-lihat merch yang kami jual!</ThirdDivH>
                 <Link to={`/products`} style={{textDecoration: "none"}}><ThirdDivButton style={{backgroundColor: "#FF678B"}}>SHOP NOW</ThirdDivButton></Link>
             </ThirdDivDiv>
             {/* <ThirdDivDiv>
