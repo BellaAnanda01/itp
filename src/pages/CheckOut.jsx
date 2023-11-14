@@ -62,7 +62,7 @@ const CheckOut = () => {
                                         fontFamily: 'Sniglet, cursive',
                                         fontSize: '16px',
                                         color: 'white',
-                                        cursor: 'pointer',
+                                        cursor: 'no-drop',
                                         margin: 'auto',
                                         display: 'block'
                                     // }} type='submit' value='Pembayaran'/>
