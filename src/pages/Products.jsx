@@ -22,7 +22,7 @@ const Products = () => {
 
   function formatRupiah(money) {
     return new Intl.NumberFormat('id-ID',
-      { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 } // diletakkan dalam object
+      { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }
     ).format(money);
   }
 
