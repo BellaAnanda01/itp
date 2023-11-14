@@ -66,7 +66,7 @@ const CheckOut = () => {
                                         margin: 'auto',
                                         display: 'block'
                                     // }} type='submit' value='Pembayaran'/>
-                                    }} type='submit' disabled value='Pembayaran'/>
+                                    }} type='submit' disabled value='Sold Out'/>
                                     <PulseLoader
                                         color="black"
                                         loading={loadingSubmit}
