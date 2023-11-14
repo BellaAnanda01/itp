@@ -70,10 +70,10 @@ const Div3 = () => {
                 <ThirdDivH style={{color: "#ff7b58", textShadow: "0.04419417em 0.04419417em 0em rgba(0, 0, 0, 1.000000)"}}>Beli tiket Open House ITP di sini!!</ThirdDivH>
                 <Link to={`/tickettypes`} style={{textDecoration: "none"}}><ThirdDivButton style={{backgroundColor: "#FF678B"}}>BUY TICKETS</ThirdDivButton></Link>
             </ThirdDivDiv>
-{/*             <ThirdDivDiv>
-                <ThirdDivH>Jangan lupa untuk check out merch PO-2 kami, ya!</ThirdDivH>
+             <ThirdDivDiv>
+                <ThirdDivH>Yuk, lihat-lihat yang kami jual!</ThirdDivH>
                 <Link to={`/products`} style={{textDecoration: "none"}}><ThirdDivButton style={{backgroundColor: "#FF678B"}}>SHOP NOW</ThirdDivButton></Link>
-            </ThirdDivDiv> */}
+            </ThirdDivDiv>
             {/* <ThirdDivDiv>
                 <ThirdDivH>Jangan lupa untuk check out merch kami, ya!</ThirdDivH>
                 <Link to={`/`} style={{textDecoration: "none"}}><ThirdDivButton disabled style={{backgroundColor: "#fb97ae", cursor: "default"}}>COMING SOON</ThirdDivButton></Link>
