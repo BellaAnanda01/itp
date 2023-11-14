@@ -10,9 +10,9 @@ const NavbarMenu = () => {
         <Link to={`/tickettypes`} className="block md:inline-block px-3 py-2 rounded-md hover:text-black hover:bg-[#E9E3D7] focus:outline-none focus:text-black focus:bg-[#E9E3D7]">
         Ticket
         </Link>
-{/*         <Link to={`/products`} className="block md:inline-block px-3 py-2 rounded-md hover:text-black hover:bg-[#E9E3D7] focus:outline-none focus:text-black focus:bg-[#E9E3D7]">
+        <Link to={`/products`} className="block md:inline-block px-3 py-2 rounded-md hover:text-black hover:bg-[#E9E3D7] focus:outline-none focus:text-black focus:bg-[#E9E3D7]">
         Merchandise
-        </Link> */}
+        </Link>
     </div>
   )
 }
